@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Damping function in Morse/Long-Range Potential Energy Model</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">zhaiyuSCI </a></h1>
+                <nav><ul>
+                    <li><a href="/pages/about-the-author.html">About the author</a></li>
+                    <li><a href="/category/education.html">Education</a></li>
+                    <li class="active"><a href="/category/science.html">Science</a></li>
+                    <li><a href="/category/technology.html">Technology</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/damping-function-in-morselong-range-potential-energy-model.html" rel="bookmark"
+           title="Permalink to Damping function in Morse/Long-Range Potential Energy Model">Damping function in Morse/Long-Range Potential Energy Model</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-03-12T22:20:00+08:00">
+                Published: Sat 12 March 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/yu-zhai.html">Yu Zhai</a>
+        </address>
+<p>In <a href="/category/science.html">Science</a>.</p>
+
+</footer><!-- /.post-info -->      <p>It is a great success that the application of Morse/Long-Range (MLR) in van der Waals (vdW) complex.  MLR is devloped by R. J. Le Roy et al..  You may want to use it when building you own bi-atomic system model.  That's cool and you can always use <a href="http://scienide2.uwaterloo.ca/~rleroy/betaFIT/">betaFIT</a>, where you can get the code and manual.</p>
+
+<p>In the past, MLR had difficulty in <em>short range</em> (as its name, it focused on <em>long range</em>).  It means that you can use a inverse power model to represent the long range behaviour of a system, like when the two monomers in the complex distants away by 10 Angstrom or more.  But in long range, the coefficients of the inverse power terms tend to be 0 for the electrons there merge together.</p>
+
+<p>Luckily, Prof Le Roy came up with the damping function (Yeppy!) which can fit this decrease when the nuclear distance vanishes.  If you wanna get the details, please read <a href="http://www.tandfonline.com/doi/abs/10.1080/00268976.2010.527304#.VuQoRSbAPtQ">Mol. Phys., 109, 435 (2011)</a>.  By the way, this modified damping function has already been included in the newest version of betaFIT.</p>
+
+<p>Recently.</p>
+
+<p>Acctually today, I enhanced the MLR in Multi Dimension system by adding a Modified Tang-Tonnies damping function with the paramenter in it as a function of angles.  By this way, I have managed the fitting error one the third of the previous model.  I will going to talk about this topic in this years ISMS in UIUC.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://huiligroup.org/">Prof. Hui Li Group</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

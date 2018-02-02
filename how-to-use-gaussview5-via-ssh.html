@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>How to use GaussView5 via ssh</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">zhaiyuSCI </a></h1>
+                <nav><ul>
+                    <li><a href="/pages/about-the-author.html">About the author</a></li>
+                    <li><a href="/category/education.html">Education</a></li>
+                    <li><a href="/category/science.html">Science</a></li>
+                    <li class="active"><a href="/category/technology.html">Technology</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/how-to-use-gaussview5-via-ssh.html" rel="bookmark"
+           title="Permalink to How to use GaussView5 via ssh">How to use GaussView5 via ssh</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-05-26T22:30:00+08:00">
+                Published: Thu 26 May 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/yu-zhai.html">Yu Zhai</a>
+        </address>
+<p>In <a href="/category/technology.html">Technology</a>.</p>
+
+</footer><!-- /.post-info -->      <p>Well, it seems that a lot of people (including the past me) do not know how to use GaussView in a server.  Say, it is fairly difficult to set the X server up.</p>
+<p><a href="http://huiligroup.org/">Prof. Li</a> and I want to use it.  Actually, Prof. Li was going to let me help him install a copy on his Macbook.  However, we find that we do not have the copyright to do so.  But our institute do buy the software, at least for the server.  But we found it did not work.</p>
+<p>The reason is that in the past IT engineer from ITC set the environment variable <code>DISPLAY</code> as a value (Why? I do not know).  And there do be some essay online told us that you should set things up in your <code>.bashrc</code> like this</p>
+<div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">REMOTEHOST</span><span class="o">=</span><span class="sb">`</span>who am i <span class="p">|</span> sed -n <span class="s1">&#39;s/.*(\([^) ]*\).*/\1/p; 1q&#39;</span><span class="sb">`</span>
+<span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span><span class="si">${</span><span class="nv">REMOTEHOST</span><span class="si">}</span>:0
+</pre></div>
+
+
+<p>Er, it is not that right.</p>
+<p>Prof. Li told me that when he worked in uwaterloo, it is easy.  You can just type <code>ssh -Y xxx.xxx.xxx.xxx</code> to login and <code>gv</code>.  Well...</p>
+<p>Back from Prof. Li's office, I find that what I am using, <a href="http://mobaxterm.mobatek.net/">MobaXterm</a>, can easily open its X server automatically.  It came to me that maybe there is something MobaXterm do but we do not know.  I check its setting and find it enable the X forwarding and I read the man page of ssh, it is what <code>-Y</code> do.  And what is more, MobaXterm can setup <code>DISPLAY</code> automatically.  So, maybe <code>ssh -Y</code> can do the same thing.  But there is some different.  I think <code>ssh -Y</code> will not change <code>DISPLAY</code> if it has been set, like this</p>
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> x<span class="nv">$DISPLAY</span> -ne x <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nv">DISPLAY</span><span class="o">=</span>xxx <span class="c1"># I do not know what it actually does,</span>
+<span class="k">fi</span>
+</pre></div>
+
+
+<p>So I comment out the line in <code>~/.bashrc</code> problem solved.</p>
+<p>It is also true if you are using Molden from server.</p>
+<p>And again, I recommend MobaXterm to you.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://huiligroup.org/">Prof. Hui Li Group</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

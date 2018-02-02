@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>zhaiyuSCI - Education</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">zhaiyuSCI </a></h1>
+                <nav><ul>
+                    <li><a href="/pages/about-the-author.html">About the author</a></li>
+                    <li class="active"><a href="/category/education.html">Education</a></li>
+                    <li><a href="/category/science.html">Science</a></li>
+                    <li><a href="/category/technology.html">Technology</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/quantum-harmonic-oscillator-as-a-training-material-for-young-theoretical-chemists.html">Quantum Harmonic Oscillator as a training material for young theoretical chemists</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2017-06-27T22:30:00+08:00">
+                Published: Tue 27 June 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/yu-zhai.html">Yu Zhai</a>
+        </address>
+<p>In <a href="/category/education.html">Education</a>.</p>
+
+</footer><!-- /.post-info --><p>As I know, a lot of famous universities in North America and Europe train their young scientist with pretty hard jobs.  It is not always the same situation here in China, oh, mainland of it.</p>
+<p>In China, the courses are often limited to 'introduction'.  Most of the professors introduce the basic ideas of the subject, and the students finish the exercises in the textbook, which is aims at the graduate school entrance examination.   However, in the famous universities, the homework can be very difficult to solve, and often need the students to finish some reading tasks and some programming.  The place where I got the idea is OCW of many universities like MIT.  A good example is list <a href="http://www.scs.illinois.edu/~sohirata/education.html">here</a>(Professor So Hirata's page).</p>
+<p>I am now a Ph. D. candidate and I need help my professor train young graduate students.  Actually, in the future, when I have my own team (although perhaps I could spoil that...), I need train my own students.  What should I do?</p>
+<p>Here is my plan.  As I am working on Theoretical Chemistry in the 21st century, my students need to know how to program.  So I look into the textbook of spectroscopy, in which field I am making efforts, to find the good examples for the primers.  Quantum Harmonic Oscillator is a good example to train programming for several reasons. (a) You do not need a eigensolver, which is always hard for guys of chemistry major, to know its eigenvalue and eigenfunction (of course we are talking about Hamiltonian here); (b) The eigenfunction is analytically available . However, to get the function, a subroutine to calculate the Hermite polynomials, which a sets of unlimited number orthogonal functions with recursion relation; (c) To finish the job, all the important syntaxes in FORTRAN are used.  Yes, we still use FORTRAN. But I think it is not a big deal if you want to use another language.  As I am informed, python is one of the most popular programming languages in science education.  One more thing is that the finished subroutines, the eigenfunctions of harmonic oscillator, can be used as the basis set to solve 1D quantum oscillator, although the main method we use in <a href="http://huiligroup.org/">Li group</a> is sinc DVR. </p>
+<p>The job I gave the younger students is composing a program to draw the picture like <a href="https://en.wikipedia.org/wiki/Quantum_harmonic_oscillator#/media/File:HarmOsziFunktionen.png">the one on Wikipedia</a>.</p>
+<p>I ask my young lab mates to finish the job by Friday.  I will give an example here after that here on my blog.  Notice that the visualization codes are not needed. They just need to work out the input file of some plot tools.  I do not want to make the job too hard.  I also tell them that maybe they can just work out the first five functions instead of the general one (again, less hard problem, but it is for primers).</p>
+<p>I wish them good luck.  I will post my program here, although it will not be the best solution.</p>
+<hr>
+<p>Sevaral days later...</p>
+<p>The codes is available <a href="https://github.com/zhaiyusci/theor.chem.primers">here</a>.</p>                </article>
+            </aside><!-- /#featured -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://huiligroup.org/">Prof. Hui Li Group</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

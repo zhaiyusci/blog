@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Limit memory usage of a single process</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">zhaiyuSCI </a></h1>
+                <nav><ul>
+                    <li><a href="/pages/about-the-author.html">About the author</a></li>
+                    <li><a href="/category/education.html">Education</a></li>
+                    <li><a href="/category/science.html">Science</a></li>
+                    <li class="active"><a href="/category/technology.html">Technology</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/limit-memory-usage-of-a-single-process.html" rel="bookmark"
+           title="Permalink to Limit memory usage of a single process">Limit memory usage of a single process</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-10-08T22:30:00+08:00">
+                Published: Sat 08 October 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/yu-zhai.html">Yu Zhai</a>
+        </address>
+<p>In <a href="/category/technology.html">Technology</a>.</p>
+
+</footer><!-- /.post-info -->      <p>If you are a computational scientist, I mean, not matter what you are working on, deep learning, computational physics, computational chemistry, etc., and if you use C++.  It is likely that you write a program to leak the momery.</p>
+<p>It is a disaster!!!  Anyone run Linux on his/her own laptop and write a code like this</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">;</span><span class="n">i</span><span class="o">!=</span><span class="mi">1</span><span class="p">;){</span>
+        <span class="k">new</span> <span class="kt">double</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>(I know the readers are not idiots and will not write program like this.) will find that your computer just dead in like a minute.  But frankly speaking, if you build a class and it has a construction function without a proper distruction function, and maybe one of the members of the class is a pointer, memory leaking happens, and this is a common mistake, even if you are a smart guy.</p>
+<p>I also know that if you are a computational scientist you may not want to check if there is enough momery to "new" something, just because it is waste of time and come on, we are not professional programmer!</p>
+<p>Therefore, when we debug a program in our laptop, what should we do?  A good choice is to put your program in a box.  If the memory inside the box runs out, just kill the program withour kill the mechine.</p>
+<p>I am a Chinese.  So I search online in Chinese.  Unfortunately, there is not single one solution for this in Chinese world.  Luckily, there is one solution, which is exactly what we want. <a href="https://github.com/pshved/timeout">Timeout</a> is a script that limit the memory and time use of a process.  To use it, it is simple</p>
+<div class="highlight"><pre><span></span>timeout -m <span class="m">1000000</span> ./qmc.x -d <span class="m">1000</span>
+</pre></div>
+
+
+<p>Here, the '-m 1000000' is to set the maxium memory of the following command <code>./qmc.x -d 1000</code>, and the unit of the memory is KiB.</p>
+<p>Well, it is not the manual of it. Just go the the github page for more information.</p>
+<p>Finally, thanks to the author of the script, <a href="http://coldattic.info/shvedsky/pro/blogs/a-foo-walks-into-a-bar">Pavel Shved</a>.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://huiligroup.org/">Prof. Hui Li Group</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

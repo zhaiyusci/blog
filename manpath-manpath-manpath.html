@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>MANPATH ${MANPATH} $(manpath)</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">zhaiyuSCI </a></h1>
+                <nav><ul>
+                    <li><a href="/pages/about-the-author.html">About the author</a></li>
+                    <li><a href="/category/education.html">Education</a></li>
+                    <li><a href="/category/science.html">Science</a></li>
+                    <li class="active"><a href="/category/technology.html">Technology</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/manpath-manpath-manpath.html" rel="bookmark"
+           title="Permalink to MANPATH ${MANPATH} $(manpath)">MANPATH ${MANPATH} $(manpath)</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-08-30T20:30:00+08:00">
+                Published: Tue 30 August 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/yu-zhai.html">Yu Zhai</a>
+        </address>
+<p>In <a href="/category/technology.html">Technology</a>.</p>
+
+</footer><!-- /.post-info -->      <p>In the past, I only set the shell variable <code>PATH</code> to make the software compiledby me can be found.</p>
+<p>And after I installed TeXLive 2016 I learnt how to set <code>MANPATH</code>, which allows me to use man to browse the manual.</p>
+<p>But today, I find what I was doing is absolutely wrong.</p>
+<p>I use Linux Mint 18.</p>
+<p>the way I set <code>MANPATH</code> was like this</p>
+<div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">MANPATH</span><span class="o">=</span>/path/to/the/man/page:<span class="si">${</span><span class="nv">MANPATH</span><span class="si">}</span>
+</pre></div>
+
+
+<p>Well, that is wrong because in this way, the <code>MANPATH</code> variable is set and the <code>mandb</code> no longer scans the system file <code>/etc/manpath.config</code>, which is relied by all the, how to say, native program.</p>
+<p>If <code>mandb</code> runs, it will give a line like this</p>
+<div class="highlight"><pre><span></span><span class="n">mandb</span><span class="o">:</span> <span class="n">warning</span><span class="o">:</span> <span class="n">$MANPATH</span> <span class="kd">set</span><span class="o">,</span> <span class="n">ignoring</span> <span class="sr">/etc/</span><span class="n">manpath</span><span class="o">.</span><span class="na">config</span>
+</pre></div>
+
+
+<p>The reason is that, in Ubuntu based system, as I read online, the MANPATH is null by default.  Yes, the system will create the database and yes, the <code>man</code> works for all the program like <code>ls</code> and all the program installed via <code>apt</code>.  But the system <em>does not</em> set the variable <code>MANPATH</code>.</p>
+<p>The right way to set it is like this, as far as I tested</p>
+<div class="highlight"><pre><span></span><span class="nb">unset</span> MANPATH
+<span class="nb">export</span> <span class="nv">MANPATH</span><span class="o">=</span><span class="k">$(</span>manpath -q<span class="k">)</span>
+<span class="c1"># somthing else</span>
+<span class="nb">export</span> <span class="nv">MANPATH</span><span class="o">=</span>/path/to/the/man/page:<span class="si">${</span><span class="nv">MANPATH</span><span class="si">}</span>
+<span class="c1"># something else</span>
+</pre></div>
+
+
+<p>The second line up there is to set the MANPATH the initial value it should be as the <code>/etc/manpath.config</code> is sourced.  <em>Notice that the first line is also indispensible 'cause the <code>manpath</code> excutable will ignore <code>/etc/manpath.config</code> as well if <code>MANPATH</code> is set</em>.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://huiligroup.org/">Prof. Hui Li Group</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

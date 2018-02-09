@@ -15,6 +15,8 @@
 	<link href="http://www.zhaiyusci.net/blog/theme/bootstrap.min.css" rel="stylesheet">
 	<link href="http://www.zhaiyusci.net/blog/theme/local.css" rel="stylesheet">
 	<link href="http://www.zhaiyusci.net/blog/theme/pygments.css" rel="stylesheet">
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/futura-renner" type="text/css"/>
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/cmu-concrete" type="text/css"/>
 
 	<!-- Feeds -->
 	<link href="http://www.zhaiyusci.net/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="zhaiyuSCI Atom Feed" />
@@ -27,7 +29,7 @@
 	<div class="topbar">
 	  <div class="topbar-inner">
 		<div class="container-fluid">
-		  <a class="brand" href="http://www.zhaiyusci.net/blog/">zhaiyuSCI</a>
+		  <a class="brand" href="http://www.zhaiyusci.net/blog/" style="font-family: 'FuturaRennerRegular'; font-weight: normal; font-style: normal; ">zhaiyuSCI</a>
 			<ul class="nav">
 						<li><a href="http://www.zhaiyusci.net/blog/pages/about-the-author.html">About the author</a></li>
 					<li ><a href="http://www.zhaiyusci.net/blog/category/education.html">Education</a></li>
@@ -64,7 +66,9 @@ I am Yu ZHAI, and 'ZHAI' is my lastname. </p>
 	</div>
 		<footer>
 		  <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
-		  <p>&copy; Yu Zhai</p>
+      <p>&copy; 2016-<span id="copyrightyear">present</span> Yu Zhai.  All right reserved.</p>
+      <script> var copyrightdate= new Date(); var copyrightyear = copyrightdate.getFullYear(); document.getElementById("copyrightyear").innerHTML = copyrightyear; </script>
+			<!-- <p>&copy; 2016-Yu Zhai</p> -->
 		</footer>
 	  </div>
 

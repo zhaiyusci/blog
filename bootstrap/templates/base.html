@@ -13,8 +13,9 @@
 
 	<!-- Styles -->
 	<link href="{{ SITEURL }}/theme/bootstrap.min.css" rel="stylesheet">
-	<link href="{{ SITEURL }}/theme/local.css" rel="stylesheet">
 	<link href="{{ SITEURL }}/theme/pygments.css" rel="stylesheet">
+	<link href="{{ SITEURL }}/theme/local.css" rel="stylesheet">
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/futura-renner" type="text/css"/>
 
 	<!-- Feeds -->
 	{% if FEED_ALL_ATOM %}
@@ -42,7 +43,7 @@
 	<div class="topbar">
 	  <div class="topbar-inner">
 		<div class="container-fluid">
-		  <a class="brand" href="{{ SITEURL }}/">{{ SITENAME }}</a>
+		  <a class="brand" href="{{ SITEURL }}/" style="font-family: 'FuturaRennerRegular'; font-weight: normal; font-style: normal; ">{{ SITENAME }}</a>
 			<ul class="nav">
 				{% for title, link in MENUITEMS %}
 					<li><a href="{{ link }}">{{ title }}</a></li>
@@ -85,7 +86,9 @@
 			{% block content %}{% endblock %}
 		<footer>
 		  <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
-		  <p>&copy; {{ AUTHOR }}</p>
+      <p>&copy; 2016-<span id="copyrightyear">present</span> Yu Zhai.  All right reserved.</p>
+      <script> var copyrightdate= new Date(); var copyrightyear = copyrightdate.getFullYear(); document.getElementById("copyrightyear").innerHTML = copyrightyear; </script>
+			<!-- <p>&copy; 2016-{{ AUTHOR }}</p> -->
 		</footer>
 	  </div>
 

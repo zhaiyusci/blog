@@ -1,178 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="utf-8" />
-        <title>zhaiyuSCI - Technology</title>
-        <link rel="stylesheet" href="http://www.zhaiyusci.net/blog/theme/css/main.css" />
-        <link href="http://www.zhaiyusci.net/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="zhaiyuSCI Atom Feed" />
+	<meta charset="utf-8">
+	<title>zhaiyuSCI</title>
+	<meta name="description" content="">
+	<meta name="author" content="Yu Zhai">
 
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+	<!-- HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+		<script src="http://www.zhaiyusci.net/blog/theme/html5.js"></script>
+	<![endif]-->
+
+	<!-- Styles -->
+	<link href="http://www.zhaiyusci.net/blog/theme/bootstrap.min.css" rel="stylesheet">
+	<link href="http://www.zhaiyusci.net/blog/theme/local.css" rel="stylesheet">
+	<link href="http://www.zhaiyusci.net/blog/theme/pygments.css" rel="stylesheet">
+
+	<!-- Feeds -->
+	<link href="http://www.zhaiyusci.net/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="zhaiyuSCI Atom Feed" />
+
+
+
+
 </head>
+<body>
+	<div class="topbar">
+	  <div class="topbar-inner">
+		<div class="container-fluid">
+		  <a class="brand" href="http://www.zhaiyusci.net/blog/">zhaiyuSCI</a>
+			<ul class="nav">
+						<li><a href="http://www.zhaiyusci.net/blog/pages/about-the-author.html">About the author</a></li>
+					<li ><a href="http://www.zhaiyusci.net/blog/category/education.html">Education</a></li>
+					<li ><a href="http://www.zhaiyusci.net/blog/category/science.html">Science</a></li>
+					<li class="active"><a href="http://www.zhaiyusci.net/blog/category/technology.html">Technology</a></li>
+			</ul>
+			<p class="pull-right"><a href="http://www.zhaiyusci.net/blog/archives.html">[archives]</a> <a href="http://www.zhaiyusci.net/blog/tags.html">[tags]</a></p>
+		</div>
+	  </div>
+	</div>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="http://www.zhaiyusci.net/blog/">zhaiyuSCI </a></h1>
-                <nav><ul>
-                    <li><a href="http://www.zhaiyusci.net/blog/pages/about-the-author.html">About the author</a></li>
-                    <li><a href="http://www.zhaiyusci.net/blog/category/education.html">Education</a></li>
-                    <li><a href="http://www.zhaiyusci.net/blog/category/science.html">Science</a></li>
-                    <li class="active"><a href="http://www.zhaiyusci.net/blog/category/technology.html">Technology</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="http://www.zhaiyusci.net/blog/move-to-github.html">Move to github</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2018-02-02T20:30:00+08:00">
-                Published: Fri 02 February 2018
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="http://www.zhaiyusci.net/blog/author/yu-zhai.html">Yu Zhai</a>
-        </address>
-<p>In <a href="http://www.zhaiyusci.net/blog/category/technology.html">Technology</a>.</p>
-
-</footer><!-- /.post-info --><p>The news today is that I have moved my site to github pages.</p>
+	<div class="container-fluid">
+	  <div class="sidebar">
+		<div class="well">
+			<h3>Blogroll</h3>
+			<ul>
+				<li><a href="http://huiligroup.org/">Prof. Hui Li Group</a></li>
+			</ul>
+			<div class="social">
+			<h3>Social</h3>
+			<ul>
+			</ul>
+			</div>
+		</div>
+	  </div>
+	  <div class="content">
+<div class="page-header"><h1>zhaiyuSCI <small>Technology</small></h1></div>
+<div class='article'>
+	<h2>Move to github</h2>
+	<div class="well small">Permalink: <a class="more" href="http://www.zhaiyusci.net/blog/move-to-github.html">2018-02-02 20:30:00+08:00</a>
+by <a class="url fn" href="http://www.zhaiyusci.net/blog/author/yu-zhai.html">Yu Zhai </a>
+ in <a href="http://www.zhaiyusci.net/blog/category/technology.html">Technology</a>
+</div>
+	<div class="summary"><p>The news today is that I have moved my site to github pages.</p>
 <p>Here are the reasons.</p>
 <h2>'Free' in 'free coffee'</h2>
-<p>As you know, <a href="https://pages.github.com/">github pages</a> is a free service for static sites, of which a sample is blog.  All you need to do are register an account on github (For me, it is <code>zhaiyusci</code>) and then create a repo named <code>zhaiyusci.github.io</code> (Of course, you should use your own user name here) and put your html files in it.  Then you get the website named <code>&lt;yourusername&gt;.github.io</code>.  If you think 'Why don't I have my own domain' then buy a domain name and follow github's manual.  Of course you should pay for the domain name but you save a big amount of money for the server.</p>
-<h2>Safe</h2>
-<p>For the contents can be published, the safest way to store is to publish them (online).  Make sure there are two copy of your data.  If you use github pages, then all your blog articles have a copy on github and another copy on your laptop/desktop (if you use git the right way).  </p>
-<p>I use pelican as the static sites generator.  Hence, the source codes of the sites are even more important than the generated site.  In the past I save the source codes in <a href="https://www.jianguoyun.com/">Nutstore</a>.  I recommend it to the readers in China to use Nutstore because it is really reliable for documents.  But for codes, git is better (Even staff of Nutstore recommended using git for codes).  Now I can simply save my source codes in <code>master</code> branch and teh site to <code>gh-pages</code> branch. </p>
-<h2>Less ad</h2>
-<p>Those who used Wordpress know what I mean here ;-)</p>
-<hr>
-<p>So you may ask how can I start?</p>
-<p>The first step is to learn how to use git and github.  I recommand learn it via <a href="https://www.youtube.com/watch?v=MJUJ4wbFm_A">this video</a>.  'Fantastic' lesson, clear idea and voice so that even I can understand.</p>
-<p>Then <a href="http://docs.getpelican.com/en/stable/">pelican</a>, which is optional.  Of cource you can choose your favourite site generator --- But this is recommanded by me.  You can see that their docs are generated by 'read the docs'.  I bet they just know which tool is best for a very kind of site, that is why they made good tools.  Chapter 'Tips' has included the step-by-step tutorial to build a site on github (not including what I wrote above how to save your source on github, that's why I wrote you should leanr git first).</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://www.zhaiyusci.net/blog/no-more-goto.html" rel="bookmark"
-                           title="Permalink to No more GOTO!">No more GOTO!</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2016-10-28T22:30:00+08:00">
-                Published: Fri 28 October 2016
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="http://www.zhaiyusci.net/blog/author/yu-zhai.html">Yu Zhai</a>
-        </address>
-<p>In <a href="http://www.zhaiyusci.net/blog/category/technology.html">Technology</a>.</p>
-
-</footer><!-- /.post-info -->                <p>If you are working on scientific calculation, you must know FORTRAN.  Hence you will meet a lot of <code>GOTO</code>.</p>
+<p>As you know, <a href="https://pages.github.com/">github pages</a> is a free service for static sites, of which a sample is blog.  All you need to do are register an account on github …</p> <a class="btn primary xsmall" href="http://www.zhaiyusci.net/blog/move-to-github.html">more…</a>
+	</div>
+</div>	
+<div class='article'>
+	<h2>No more GOTO!</h2>
+	<div class="well small">Permalink: <a class="more" href="http://www.zhaiyusci.net/blog/no-more-goto.html">2016-10-28 22:30:00+08:00</a>
+by <a class="url fn" href="http://www.zhaiyusci.net/blog/author/yu-zhai.html">Yu Zhai </a>
+ in <a href="http://www.zhaiyusci.net/blog/category/technology.html">Technology</a>
+</div>
+	<div class="summary"><p>If you are working on scientific calculation, you must know FORTRAN.  Hence you will meet a lot of <code>GOTO</code>.</p>
 <p>I JUST HATE IT.</p>
 <p><code>GOTO</code> looks like interchange.  Well, it is good for crossroad.  But frankly speaking, I do not know how to drive :-(.</p>
-<p>I read blogs saying that, if you …</p>
-                <a class="readmore" href="http://www.zhaiyusci.net/blog/no-more-goto.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://www.zhaiyusci.net/blog/limit-memory-usage-of-a-single-process.html" rel="bookmark"
-                           title="Permalink to Limit memory usage of a single process">Limit memory usage of a single process</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2016-10-08T22:30:00+08:00">
-                Published: Sat 08 October 2016
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="http://www.zhaiyusci.net/blog/author/yu-zhai.html">Yu Zhai</a>
-        </address>
-<p>In <a href="http://www.zhaiyusci.net/blog/category/technology.html">Technology</a>.</p>
-
-</footer><!-- /.post-info -->                <p>If you are a computational scientist, I mean, not matter what you are working on, deep learning, computational physics, computational chemistry, etc., and if you use C++.  It is likely that you write a program to leak the momery.</p>
-<p>It is a disaster!!!  Anyone run Linux on his/her own …</p>
-                <a class="readmore" href="http://www.zhaiyusci.net/blog/limit-memory-usage-of-a-single-process.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://www.zhaiyusci.net/blog/manpath-manpath-manpath.html" rel="bookmark"
-                           title="Permalink to MANPATH ${MANPATH} $(manpath)">MANPATH ${MANPATH} $(manpath)</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2016-08-30T20:30:00+08:00">
-                Published: Tue 30 August 2016
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="http://www.zhaiyusci.net/blog/author/yu-zhai.html">Yu Zhai</a>
-        </address>
-<p>In <a href="http://www.zhaiyusci.net/blog/category/technology.html">Technology</a>.</p>
-
-</footer><!-- /.post-info -->                <p>In the past, I only set the shell variable <code>PATH</code> to make the software compiledby me can be found.</p>
+<p>I read blogs saying that, if you …</p> <a class="btn primary xsmall" href="http://www.zhaiyusci.net/blog/no-more-goto.html">more…</a>
+	</div>
+</div>	
+<div class='article'>
+	<h2>Limit memory usage of a single process</h2>
+	<div class="well small">Permalink: <a class="more" href="http://www.zhaiyusci.net/blog/limit-memory-usage-of-a-single-process.html">2016-10-08 22:30:00+08:00</a>
+by <a class="url fn" href="http://www.zhaiyusci.net/blog/author/yu-zhai.html">Yu Zhai </a>
+ in <a href="http://www.zhaiyusci.net/blog/category/technology.html">Technology</a>
+</div>
+	<div class="summary"><p>If you are a computational scientist, I mean, not matter what you are working on, deep learning, computational physics, computational chemistry, etc., and if you use C++.  It is likely that you write a program to leak the momery.</p>
+<p>It is a disaster!!!  Anyone run Linux on his/her own …</p> <a class="btn primary xsmall" href="http://www.zhaiyusci.net/blog/limit-memory-usage-of-a-single-process.html">more…</a>
+	</div>
+</div>	
+<div class='article'>
+	<h2>MANPATH ${MANPATH} $(manpath)</h2>
+	<div class="well small">Permalink: <a class="more" href="http://www.zhaiyusci.net/blog/manpath-manpath-manpath.html">2016-08-30 20:30:00+08:00</a>
+by <a class="url fn" href="http://www.zhaiyusci.net/blog/author/yu-zhai.html">Yu Zhai </a>
+ in <a href="http://www.zhaiyusci.net/blog/category/technology.html">Technology</a>
+</div>
+	<div class="summary"><p>In the past, I only set the shell variable <code>PATH</code> to make the software compiledby me can be found.</p>
 <p>And after I installed TeXLive 2016 I learnt how to set <code>MANPATH</code>, which allows me to use man to browse the manual.</p>
-<p>But today, I find what I was doing is …</p>
-                <a class="readmore" href="http://www.zhaiyusci.net/blog/manpath-manpath-manpath.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+<p>But today, I find what I was doing is …</p> <a class="btn primary xsmall" href="http://www.zhaiyusci.net/blog/manpath-manpath-manpath.html">more…</a>
+	</div>
+</div>	
+<div class='article'>
+	<h2>How to use GaussView5 via ssh</h2>
+	<div class="well small">Permalink: <a class="more" href="http://www.zhaiyusci.net/blog/how-to-use-gaussview5-via-ssh.html">2016-05-26 22:30:00+08:00</a>
+by <a class="url fn" href="http://www.zhaiyusci.net/blog/author/yu-zhai.html">Yu Zhai </a>
+ in <a href="http://www.zhaiyusci.net/blog/category/technology.html">Technology</a>
+</div>
+	<div class="summary"><p>Well, it seems that a lot of people (including the past me) do not know how to use GaussView in a server.  Say, it is fairly difficult to set the X server up.</p>
+<p><a href="http://huiligroup.org/">Prof. Li</a> and I want to use it.  Actually, Prof. Li was going to let me help …</p> <a class="btn primary xsmall" href="http://www.zhaiyusci.net/blog/how-to-use-gaussview5-via-ssh.html">more…</a>
+	</div>
+</div>	
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://www.zhaiyusci.net/blog/how-to-use-gaussview5-via-ssh.html" rel="bookmark"
-                           title="Permalink to How to use GaussView5 via ssh">How to use GaussView5 via ssh</a></h1>
-                </header>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2016-05-26T22:30:00+08:00">
-                Published: Thu 26 May 2016
-        </abbr>
+		<footer>
+		  <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
+		  <p>&copy; Yu Zhai</p>
+		</footer>
+	  </div>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="http://www.zhaiyusci.net/blog/author/yu-zhai.html">Yu Zhai</a>
-        </address>
-<p>In <a href="http://www.zhaiyusci.net/blog/category/technology.html">Technology</a>.</p>
-
-</footer><!-- /.post-info -->                <p>Well, it seems that a lot of people (including the past me) do not know how to use GaussView in a server.  Say, it is fairly difficult to set the X server up.</p>
-<p><a href="http://huiligroup.org/">Prof. Li</a> and I want to use it.  Actually, Prof. Li was going to let me help …</p>
-                <a class="readmore" href="http://www.zhaiyusci.net/blog/how-to-use-gaussview5-via-ssh.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-                </ol><!-- /#posts-list -->
-                </section><!-- /#content -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://huiligroup.org/">Prof. Hui Li Group</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="http://www.zhaiyusci.net/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
-
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
-
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
-
+	</div>
 </body>
 </html>

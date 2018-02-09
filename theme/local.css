@@ -37,8 +37,3 @@ div.highlight pre {
 .social a[href*='twitter.com']:before {content: url('./images/icons/twitter.png'); margin-right: 2px; vertical-align: -3px;}
 .social a[href*='weibo.com']:before {content: url('./images/icons/weibo.png'); margin-right: 2px; vertical-align: -3px;}
 
-p {
-   font-family: 'CMUConcreteRoman';
-   font-weight: normal;
-   font-style: normal;
-}

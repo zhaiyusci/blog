@@ -9,7 +9,7 @@
 &lt;li&gt;Download the &lt;code&gt;Kdenlive-xx.yy.zz-w64.zip&lt;/code&gt; package &lt;a href="https://files.kde.org/kdenlive/release/Kdenlive-18.04.1d-w64.zip"&gt;here&lt;/a&gt; (the lastest version should be download from the official page).&lt;/li&gt;
 &lt;li&gt;Unzip &lt;code&gt;Kdenlive-xx.yy.zz-w64.zip&lt;/code&gt; to &lt;code&gt;C:\kdenlive\&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Download ffmpeg library &lt;a href="https://ffmpeg.zeranoe.com/builds/win64/static/ffmpeg-20180726-bce4da8-win64-static.zip"&gt;here&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Open the ffmpeg zip package and drop 'n' drop to &lt;code&gt;C:\kdenlive\&lt;/code&gt;.  After that you can see the &lt;code&gt;bin&lt;/code&gt; directory appears in &lt;code&gt;C:\kdenlive\&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Open the ffmpeg zip package and drag 'n' drop to &lt;code&gt;C:\kdenlive\&lt;/code&gt;.  After that you can see the &lt;code&gt;bin&lt;/code&gt; directory appears in &lt;code&gt;C:\kdenlive\&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Now double click the &lt;code&gt;kdenlive.exe&lt;/code&gt; try to load a video in the bin.  All format supported by ffmpeg should now be supported by kdenlive.  &lt;/p&gt;
 &lt;p&gt;Enjoy!&lt;/p&gt;</content></entry></feed>

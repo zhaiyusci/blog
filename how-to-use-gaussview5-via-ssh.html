@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>zhaiyuSCI</title>
+	<meta name="description" content="">
+	<meta name="author" content="Yu Zhai">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+		<script src="http://www.zhaiyusci.net/blog/theme/html5.js"></script>
+	<![endif]-->
+
+	<!-- Styles -->
+	<link href="http://www.zhaiyusci.net/blog/theme/bootstrap.min.css" rel="stylesheet">
+	<link href="http://www.zhaiyusci.net/blog/theme/pygments.css" rel="stylesheet">
+	<link href="http://www.zhaiyusci.net/blog/theme/local.css" rel="stylesheet">
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/futura-renner" type="text/css"/>
+
+	<!-- Feeds -->
+	<link href="http://www.zhaiyusci.net/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="zhaiyuSCI Atom Feed" />
+
+
+
+
+</head>
+<body>
+	<div class="topbar">
+	  <div class="topbar-inner">
+		<div class="container-fluid">
+		  <a class="brand" href="http://www.zhaiyusci.net/blog/" style="font-family: 'FuturaRennerRegular'; font-weight: normal; font-style: normal; ">zhaiyuSCI</a>
+			<ul class="nav">
+						<li><a href="http://www.zhaiyusci.net/blog/pages/about-the-author.html">About the author</a></li>
+					<li ><a href="http://www.zhaiyusci.net/blog/category/education.html">Education</a></li>
+					<li ><a href="http://www.zhaiyusci.net/blog/category/science.html">Science</a></li>
+					<li ><a href="http://www.zhaiyusci.net/blog/category/tech.html">Tech</a></li>
+					<li class="active"><a href="http://www.zhaiyusci.net/blog/category/technology.html">Technology</a></li>
+			</ul>
+			<p class="pull-right"><a href="http://www.zhaiyusci.net/blog/archives.html">[archives]</a> <a href="http://www.zhaiyusci.net/blog/tags.html">[tags]</a></p>
+		</div>
+	  </div>
+	</div>
+
+	<div class="container-fluid">
+	  <div class="sidebar">
+		<div class="well">
+			<h3>Blogroll</h3>
+			<ul>
+				<li><a href="http://huiligroup.org/">Prof. Hui Li Group</a></li>
+			</ul>
+			<div class="social">
+			<h3>Social</h3>
+			<ul>
+			</ul>
+			</div>
+		</div>
+	  </div>
+	  <div class="content">
+	<div class='article'>
+		<div class="page-header"><h1>How to use GaussView5 via ssh</h1></div>
+		<div class="well small">Permalink: <a class="more" href="http://www.zhaiyusci.net/blog/how-to-use-gaussview5-via-ssh.html">2016-05-26 22:30:00+08:00</a>
+by <a class="url fn" href="http://www.zhaiyusci.net/blog/author/yu-zhai.html">Yu Zhai </a>
+ in <a href="http://www.zhaiyusci.net/blog/category/technology.html">Technology</a>
+</div>
+		<div><p>Well, it seems that a lot of people (including the past me) do not know how to use GaussView in a server.  Say, it is fairly difficult to set the X server up.</p>
+<p><a href="http://huiligroup.org/">Prof. Li</a> and I want to use it.  Actually, Prof. Li was going to let me help him install a copy on his Macbook.  However, we find that we do not have the copyright to do so.  But our institute do buy the software, at least for the server.  But we found it did not work.</p>
+<p>The reason is that in the past IT engineer from ITC set the environment variable <code>DISPLAY</code> as a value (Why? I do not know).  And there do be some essay online told us that you should set things up in your <code>.bashrc</code> like this</p>
+<div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">REMOTEHOST</span><span class="o">=</span><span class="sb">`</span>who am i <span class="p">|</span> sed -n <span class="s1">&#39;s/.*(\([^) ]*\).*/\1/p; 1q&#39;</span><span class="sb">`</span>
+<span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span><span class="si">${</span><span class="nv">REMOTEHOST</span><span class="si">}</span>:0
+</pre></div>
+
+
+<p>Er, it is not that right.</p>
+<p>Prof. Li told me that when he worked in uwaterloo, it is easy.  You can just type <code>ssh -Y xxx.xxx.xxx.xxx</code> to login and <code>gv</code>.  Well...</p>
+<p>Back from Prof. Li's office, I find that what I am using, <a href="http://mobaxterm.mobatek.net/">MobaXterm</a>, can easily open its X server automatically.  It came to me that maybe there is something MobaXterm do but we do not know.  I check its setting and find it enable the X forwarding and I read the man page of ssh, it is what <code>-Y</code> do.  And what is more, MobaXterm can setup <code>DISPLAY</code> automatically.  So, maybe <code>ssh -Y</code> can do the same thing.  But there is some different.  I think <code>ssh -Y</code> will not change <code>DISPLAY</code> if it has been set, like this</p>
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> x<span class="nv">$DISPLAY</span> -ne x <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nv">DISPLAY</span><span class="o">=</span>xxx <span class="c1"># I do not know what it actually does,</span>
+<span class="k">fi</span>
+</pre></div>
+
+
+<p>So I comment out the line in <code>~/.bashrc</code> problem solved.</p>
+<p>It is also true if you are using Molden from server.</p>
+<p>And again, I recommend MobaXterm to you.</p></div>
+	</div>
+		<footer>
+		  <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
+      <p>&copy; 2016-<span id="copyrightyear">present</span> Yu Zhai.  All right reserved.</p>
+      <script> var copyrightdate= new Date(); var copyrightyear = copyrightdate.getFullYear(); document.getElementById("copyrightyear").innerHTML = copyrightyear; </script>
+			<!-- <p>&copy; 2016-Yu Zhai</p> -->
+		</footer>
+	  </div>
+
+	</div>
+</body>
+</html>

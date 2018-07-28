@@ -32,7 +32,7 @@
 			<ul class="nav">
 						<li><a href="http://www.zhaiyusci.net/blog/pages/about-the-author.html">About the author</a></li>
 					<li ><a href="http://www.zhaiyusci.net/blog/category/education.html">Education</a></li>
-					<li ><a href="http://www.zhaiyusci.net/blog/category/science.html">Science</a></li>
+					<li class="active"><a href="http://www.zhaiyusci.net/blog/category/science.html">Science</a></li>
 					<li ><a href="http://www.zhaiyusci.net/blog/category/tech.html">Tech</a></li>
 					<li ><a href="http://www.zhaiyusci.net/blog/category/technology.html">Technology</a></li>
 			</ul>
@@ -56,51 +56,19 @@
 		</div>
 	  </div>
 	  <div class="content">
-<div class="page-header"><h1>zhaiyuSCI <small>[archive]</small></h1></div><h2>2016</h2>
-<h3>February</h3>
-<ul>
-	<li><a href="neuron-network-pontential-energy-surfaces.html">Neuron-Network Pontential Energy Surfaces</a></li>
-</ul>
-<h3>March</h3>
-<ul>
-	<li><a href="damping-function-in-morselong-range-potential-energy-model.html">Damping function in Morse/Long-Range Potential Energy Model</a></li>
-</ul>
-<h3>April</h3>
-<ul>
-	<li><a href="interesting-details-about-vdw-system.html">Interesting details about vdW system</a></li>
-</ul>
-<h3>May</h3>
-<ul>
-	<li><a href="how-to-use-gaussview5-via-ssh.html">How to use GaussView5 via ssh</a></li>
-</ul>
-<h3>August</h3>
-<ul>
-	<li><a href="manpath-manpath-manpath.html">MANPATH ${MANPATH} $(manpath)</a></li>
-	<li><a href="diffusion-monte-carlo-methods-and-trial-function.html">Diffusion Monte Carlo Methods and Trial Function</a></li>
-</ul>
-<h3>October</h3>
-<ul>
-	<li><a href="no-more-goto.html">No more GOTO!</a></li>
-	<li><a href="limit-memory-usage-of-a-single-process.html">Limit memory usage of a single process</a></li>
-</ul>
-<h2>2017</h2>
-<h3>June</h3>
-<ul>
-	<li><a href="quantum-harmonic-oscillator-as-a-training-material-for-young-theoretical-chemists.html">Quantum Harmonic Oscillator as a training material for young theoretical chemists</a></li>
-</ul>
-<h2>2018</h2>
-<h3>January</h3>
-<ul>
-	<li><a href="ydvr-a-c-implement-of-dvr-method.html">ydvr: A C++ implement of DVR method</a></li>
-</ul>
-<h3>February</h3>
-<ul>
-	<li><a href="move-to-github.html">Move to github</a></li>
-</ul>
-<h3>July</h3>
-<ul>
-	<li><a href="install-kdenlive-on-windows.html">Install kdenlive on Windows</a></li>
-</ul>
+	<div class='article'>
+		<div class="page-header"><h1>Diffusion Monte Carlo Methods and Trial Function</h1></div>
+		<div class="well small">Permalink: <a class="more" href="http://www.zhaiyusci.net/blog/diffusion-monte-carlo-methods-and-trial-function.html">2016-08-21 14:40:00+08:00</a>
+by <a class="url fn" href="http://www.zhaiyusci.net/blog/author/yu-zhai.html">Yu Zhai </a>
+ in <a href="http://www.zhaiyusci.net/blog/category/science.html">Science</a>
+</div>
+		<div><p>For complex quantum system, the variation method is no longer useful for tho solve the problem precisely, you need a basis set of quite a large size.  <em>Quantum simulation</em> is used in such system.  <em>Monte Carlo Method</em> is widely used.</p>
+<p>Recently I began to learn about these methods.  Notice that I say 'these' because methods can be called 'Quantum Monte Carlo' are more than three ones. </p>
+<p>Diffusion Monte Carlo is a, well, good idea.  I recommend <a href="http://dx.doi.org/10.1103/RevModPhys.73.33">Rev. Mod. Phys. 73, 33 (2001)</a> as a reference.  </p>
+<p>The problem is that if you use <em>mixed estimator</em> to get the energy, something terrible happened.   Just assume that the trial function is the eigenfunction of the ground state, which means actually we have got the right answer.  No matter whether your simulation converges to the walkers' distribution or not, the energy mixed estimator will give the answer -- the eigenvalue of ground state.  Similarly, if the trial function is the eigenfunction of the first excited state, the estimator will give the answer of first excited state, the reason is that the 'local energy' is relate to the trial function.  </p>
+<p>Now let us simply do the superposition, to get the wave function for the superposition state of ground state and first excited state (just ignore the re-normalization).  Of course, the simulation answer shall be a value between the ground state energy and first excited state energy.</p>
+<p>I have coded the Diffusion Monte Carlo method and test it on the harmonic oscillator system.  It is true: the mixed estimator is highly dependent on the trial function.  Watch out!</p></div>
+	</div>
 		<footer>
 		  <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
       <p>&copy; 2016-<span id="copyrightyear">present</span> Yu Zhai.  All right reserved.</p>

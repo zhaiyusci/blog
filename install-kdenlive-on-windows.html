@@ -33,7 +33,7 @@
 						<li><a href="http://www.zhaiyusci.net/blog/pages/about-the-author.html">About the author</a></li>
 					<li ><a href="http://www.zhaiyusci.net/blog/category/education.html">Education</a></li>
 					<li ><a href="http://www.zhaiyusci.net/blog/category/science.html">Science</a></li>
-					<li ><a href="http://www.zhaiyusci.net/blog/category/tech.html">Tech</a></li>
+					<li class="active"><a href="http://www.zhaiyusci.net/blog/category/tech.html">Tech</a></li>
 					<li ><a href="http://www.zhaiyusci.net/blog/category/technology.html">Technology</a></li>
 			</ul>
 			<p class="pull-right"><a href="http://www.zhaiyusci.net/blog/archives.html">[archives]</a> <a href="http://www.zhaiyusci.net/blog/tags.html">[tags]</a></p>
@@ -56,51 +56,23 @@
 		</div>
 	  </div>
 	  <div class="content">
-<div class="page-header"><h1>zhaiyuSCI <small>[archive]</small></h1></div><h2>2016</h2>
-<h3>February</h3>
-<ul>
-	<li><a href="neuron-network-pontential-energy-surfaces.html">Neuron-Network Pontential Energy Surfaces</a></li>
-</ul>
-<h3>March</h3>
-<ul>
-	<li><a href="damping-function-in-morselong-range-potential-energy-model.html">Damping function in Morse/Long-Range Potential Energy Model</a></li>
-</ul>
-<h3>April</h3>
-<ul>
-	<li><a href="interesting-details-about-vdw-system.html">Interesting details about vdW system</a></li>
-</ul>
-<h3>May</h3>
-<ul>
-	<li><a href="how-to-use-gaussview5-via-ssh.html">How to use GaussView5 via ssh</a></li>
-</ul>
-<h3>August</h3>
-<ul>
-	<li><a href="manpath-manpath-manpath.html">MANPATH ${MANPATH} $(manpath)</a></li>
-	<li><a href="diffusion-monte-carlo-methods-and-trial-function.html">Diffusion Monte Carlo Methods and Trial Function</a></li>
-</ul>
-<h3>October</h3>
-<ul>
-	<li><a href="no-more-goto.html">No more GOTO!</a></li>
-	<li><a href="limit-memory-usage-of-a-single-process.html">Limit memory usage of a single process</a></li>
-</ul>
-<h2>2017</h2>
-<h3>June</h3>
-<ul>
-	<li><a href="quantum-harmonic-oscillator-as-a-training-material-for-young-theoretical-chemists.html">Quantum Harmonic Oscillator as a training material for young theoretical chemists</a></li>
-</ul>
-<h2>2018</h2>
-<h3>January</h3>
-<ul>
-	<li><a href="ydvr-a-c-implement-of-dvr-method.html">ydvr: A C++ implement of DVR method</a></li>
-</ul>
-<h3>February</h3>
-<ul>
-	<li><a href="move-to-github.html">Move to github</a></li>
-</ul>
-<h3>July</h3>
-<ul>
-	<li><a href="install-kdenlive-on-windows.html">Install kdenlive on Windows</a></li>
-</ul>
+	<div class='article'>
+		<div class="page-header"><h1>Install kdenlive on Windows</h1></div>
+		<div class="well small">Permalink: <a class="more" href="http://www.zhaiyusci.net/blog/install-kdenlive-on-windows.html">2018-07-29 02:10:00+08:00</a>
+by <a class="url fn" href="http://www.zhaiyusci.net/blog/author/yu-zhai.html">Yu Zhai </a>
+ in <a href="http://www.zhaiyusci.net/blog/category/tech.html">Tech</a>
+</div>
+		<div><p><a href="https://kdenlive.org/en/">kdenlive</a> is a free software used to edit videos.  Although there is 'kde' in its name, it can be used on Windows.</p>
+<p>The <a href="https://kdenlive.org/en/download/">official download page</a> has provided a version for Windows.  However, it does not work at the first step: including your raw videos in the clip bin.  </p>
+<p>This problem occurs because provided zip package does not place the ffmpeg library correctly.  Although on the download page it says, and I quote here 'Now, you don’t need to do anything more to set up. To run Kdenlive, you just have to unzip the downloaded Kdenlive version, and start Kdenlive from kdenlive.exe in kdenlive-windows folder.'</p>
+<p>Here is the full steps to make it work:
+<em> Download the <code>Kdenlive-xx.yy.zz-w64.zip</code> package <a href="https://files.kde.org/kdenlive/release/Kdenlive-18.04.1d-w64.zip">here</a> (the lastest version should be download from the official page).
+</em> Unzip <code>Kdenlive-xx.yy.zz-w64.zip</code> to <code>C:\kdenlive\</code>
+<em> Download ffmpeg library <a href="https://ffmpeg.zeranoe.com/builds/win64/static/ffmpeg-20180726-bce4da8-win64-static.zip">here</a>
+</em> Open the ffmpeg zip package and drop 'n' drop to <code>C:\kdenlive\</code>.  After that you can see the <code>bin</code> directory appears in <code>C:\kdenlive\</code>.</p>
+<p>Now double click the <code>kdenlive.exe</code> try to load a video in the bin.  All format supported by ffmpeg should now be supported by kdenlive.  </p>
+<p>Enjoy!</p></div>
+	</div>
 		<footer>
 		  <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
       <p>&copy; 2016-<span id="copyrightyear">present</span> Yu Zhai.  All right reserved.</p>

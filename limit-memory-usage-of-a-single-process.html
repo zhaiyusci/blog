@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>zhaiyuSCI</title>
+	<meta name="description" content="">
+	<meta name="author" content="Yu Zhai">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+		<script src="http://www.zhaiyusci.net/blog/theme/html5.js"></script>
+	<![endif]-->
+
+	<!-- Styles -->
+	<link href="http://www.zhaiyusci.net/blog/theme/bootstrap.min.css" rel="stylesheet">
+	<link href="http://www.zhaiyusci.net/blog/theme/pygments.css" rel="stylesheet">
+	<link href="http://www.zhaiyusci.net/blog/theme/local.css" rel="stylesheet">
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/futura-renner" type="text/css"/>
+
+	<!-- Feeds -->
+	<link href="http://www.zhaiyusci.net/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="zhaiyuSCI Atom Feed" />
+
+
+
+
+</head>
+<body>
+	<div class="topbar">
+	  <div class="topbar-inner">
+		<div class="container-fluid">
+		  <a class="brand" href="http://www.zhaiyusci.net/blog/" style="font-family: 'FuturaRennerRegular'; font-weight: normal; font-style: normal; ">zhaiyuSCI</a>
+			<ul class="nav">
+						<li><a href="http://www.zhaiyusci.net/blog/pages/about-the-author.html">About the author</a></li>
+					<li ><a href="http://www.zhaiyusci.net/blog/category/education.html">Education</a></li>
+					<li ><a href="http://www.zhaiyusci.net/blog/category/science.html">Science</a></li>
+					<li ><a href="http://www.zhaiyusci.net/blog/category/tech.html">Tech</a></li>
+					<li class="active"><a href="http://www.zhaiyusci.net/blog/category/technology.html">Technology</a></li>
+			</ul>
+			<p class="pull-right"><a href="http://www.zhaiyusci.net/blog/archives.html">[archives]</a> <a href="http://www.zhaiyusci.net/blog/tags.html">[tags]</a></p>
+		</div>
+	  </div>
+	</div>
+
+	<div class="container-fluid">
+	  <div class="sidebar">
+		<div class="well">
+			<h3>Blogroll</h3>
+			<ul>
+				<li><a href="http://huiligroup.org/">Prof. Hui Li Group</a></li>
+			</ul>
+			<div class="social">
+			<h3>Social</h3>
+			<ul>
+			</ul>
+			</div>
+		</div>
+	  </div>
+	  <div class="content">
+	<div class='article'>
+		<div class="page-header"><h1>Limit memory usage of a single process</h1></div>
+		<div class="well small">Permalink: <a class="more" href="http://www.zhaiyusci.net/blog/limit-memory-usage-of-a-single-process.html">2016-10-08 22:30:00+08:00</a>
+by <a class="url fn" href="http://www.zhaiyusci.net/blog/author/yu-zhai.html">Yu Zhai </a>
+ in <a href="http://www.zhaiyusci.net/blog/category/technology.html">Technology</a>
+</div>
+		<div><p>If you are a computational scientist, I mean, not matter what you are working on, deep learning, computational physics, computational chemistry, etc., and if you use C++.  It is likely that you write a program to leak the momery.</p>
+<p>It is a disaster!!!  Anyone run Linux on his/her own laptop and write a code like this</p>
+<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">;</span><span class="n">i</span><span class="o">!=</span><span class="mi">1</span><span class="p">;){</span>
+        <span class="k">new</span> <span class="kt">double</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>(I know the readers are not idiots and will not write program like this.) will find that your computer just dead in like a minute.  But frankly speaking, if you build a class and it has a construction function without a proper distruction function, and maybe one of the members of the class is a pointer, memory leaking happens, and this is a common mistake, even if you are a smart guy.</p>
+<p>I also know that if you are a computational scientist you may not want to check if there is enough momery to "new" something, just because it is waste of time and come on, we are not professional programmer!</p>
+<p>Therefore, when we debug a program in our laptop, what should we do?  A good choice is to put your program in a box.  If the memory inside the box runs out, just kill the program withour kill the mechine.</p>
+<p>I am a Chinese.  So I search online in Chinese.  Unfortunately, there is not single one solution for this in Chinese world.  Luckily, there is one solution, which is exactly what we want. <a href="https://github.com/pshved/timeout">Timeout</a> is a script that limit the memory and time use of a process.  To use it, it is simple</p>
+<div class="highlight"><pre><span></span>timeout -m <span class="m">1000000</span> ./qmc.x -d <span class="m">1000</span>
+</pre></div>
+
+
+<p>Here, the '-m 1000000' is to set the maxium memory of the following command <code>./qmc.x -d 1000</code>, and the unit of the memory is KiB.</p>
+<p>Well, it is not the manual of it. Just go the the github page for more information.</p>
+<p>Finally, thanks to the author of the script, <a href="http://coldattic.info/shvedsky/pro/blogs/a-foo-walks-into-a-bar">Pavel Shved</a>.</p></div>
+	</div>
+		<footer>
+		  <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
+      <p>&copy; 2016-<span id="copyrightyear">present</span> Yu Zhai.  All right reserved.</p>
+      <script> var copyrightdate= new Date(); var copyrightyear = copyrightdate.getFullYear(); document.getElementById("copyrightyear").innerHTML = copyrightyear; </script>
+			<!-- <p>&copy; 2016-Yu Zhai</p> -->
+		</footer>
+	  </div>
+
+	</div>
+</body>
+</html>

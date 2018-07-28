@@ -14,7 +14,7 @@ Here is the full steps to make it work:
 * Download the `Kdenlive-xx.yy.zz-w64.zip` package [here](https://files.kde.org/kdenlive/release/Kdenlive-18.04.1d-w64.zip) (the lastest version should be download from the official page).
 * Unzip `Kdenlive-xx.yy.zz-w64.zip` to `C:\kdenlive\`
 * Download ffmpeg library [here](https://ffmpeg.zeranoe.com/builds/win64/static/ffmpeg-20180726-bce4da8-win64-static.zip)
-* Open the ffmpeg zip package and drop 'n' drop to `C:\kdenlive\`.  After that you can see the `bin` directory appears in `C:\kdenlive\`.
+* Open the ffmpeg zip package and drag 'n' drop to `C:\kdenlive\`.  After that you can see the `bin` directory appears in `C:\kdenlive\`.
 
 Now double click the `kdenlive.exe` try to load a video in the bin.  All format supported by ffmpeg should now be supported by kdenlive.  
 

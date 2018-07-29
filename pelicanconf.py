@@ -27,6 +27,8 @@ LINKS = ( ('Prof. Hui Li Group', 'http://huiligroup.org/'),
 
 # Social widget
 SOCIAL = (
+        ('linkedin', 'https://www.linkedin.com/in/yu-zhai-1ba26291'),
+          ('github', 'https://github.com/zhaiyusci'),
          )
 
 DEFAULT_PAGINATION = 10

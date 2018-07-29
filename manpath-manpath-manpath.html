@@ -1,68 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" itemscope itemtype="http://schema.org/Person">
 <head>
-	<meta charset="utf-8">
-	<title>zhaiyuSCI</title>
-	<meta name="description" content="">
-	<meta name="author" content="Yu Zhai">
+            <meta charset="utf-8">
+        <!-- Site Meta Data -->
+        <title>MANPATH ${MANPATH} $(manpath)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Yu Zhai">
 
-	<!-- HTML5 shim, for IE6-8 support of HTML elements -->
-	<!--[if lt IE 9]>
-		<script src="http://www.zhaiyusci.net/blog/theme/html5.js"></script>
-	<![endif]-->
+        <link rel="shortcut icon" href="">
 
-	<!-- Styles -->
-	<link href="http://www.zhaiyusci.net/blog/theme/bootstrap.min.css" rel="stylesheet">
-	<link href="http://www.zhaiyusci.net/blog/theme/pygments.css" rel="stylesheet">
-	<link href="http://www.zhaiyusci.net/blog/theme/local.css" rel="stylesheet">
-  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/futura-renner" type="text/css"/>
+        <!-- schema.org -->
+        <meta itemprop="name" content="zhaiyuSCI">
+        <meta itemprop="image" content="">
+        <meta itemprop="description" content="">
 
-	<!-- Feeds -->
-	<link href="http://www.zhaiyusci.net/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="zhaiyuSCI Atom Feed" />
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        <!-- Style Meta Data -->
+        <link rel="stylesheet" href="http://www.zhaiyusci.net/blog/theme/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="http://www.zhaiyusci.net/blog/theme/css/pygments.css" type="text/css"/>
 
+        <!-- Feed Meta Data -->
+            <link href="http://www.zhaiyusci.net/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+                  title="zhaiyuSCI ATOM Feed"/>
 
+        <!-- Twitter Feed -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="">
+        <meta name="twitter:image" content="">
 
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:url" content="http://www.zhaiyusci.net/blog/manpath-manpath-manpath.html">
+    <meta name="twitter:title" content="zhaiyuSCI ~ MANPATH ${MANPATH} $(manpath)">
+    <meta name="twitter:description" content="In the past, I only set the shell variable PATH to make the software compiledby me can be found. And after I installed TeXLive 2016 I learnt how to set MANPATH, which allows me to use man to browse the manual. But today, I find what I was doing is …">
 
+    <!-- Facebook Meta Data -->
+    <meta property="og:title" content="zhaiyuSCI ~ MANPATH ${MANPATH} $(manpath)"/>
+    <meta property="og:description" content="In the past, I only set the shell variable PATH to make the software compiledby me can be found. And after I installed TeXLive 2016 I learnt how to set MANPATH, which allows me to use man to browse the manual. But today, I find what I was doing is …"/>
+    <meta property="og:image" content=""/>
 </head>
-<body>
-	<div class="topbar">
-	  <div class="topbar-inner">
-		<div class="container-fluid">
-		  <a class="brand" href="http://www.zhaiyusci.net/blog/" style="font-family: 'FuturaRennerRegular'; font-weight: normal; font-style: normal; ">zhaiyuSCI</a>
-			<ul class="nav">
-						<li><a href="http://www.zhaiyusci.net/blog/pages/about-the-author.html">About the author</a></li>
-					<li ><a href="http://www.zhaiyusci.net/blog/category/education.html">Education</a></li>
-					<li ><a href="http://www.zhaiyusci.net/blog/category/science.html">Science</a></li>
-					<li ><a href="http://www.zhaiyusci.net/blog/category/tech.html">Tech</a></li>
-					<li class="active"><a href="http://www.zhaiyusci.net/blog/category/technology.html">Technology</a></li>
-			</ul>
-			<p class="pull-right"><a href="http://www.zhaiyusci.net/blog/archives.html">[archives]</a> <a href="http://www.zhaiyusci.net/blog/tags.html">[tags]</a></p>
-		</div>
-	  </div>
-	</div>
 
-	<div class="container-fluid">
-	  <div class="sidebar">
-		<div class="well">
-			<h3>Blogroll</h3>
-			<ul>
-				<li><a href="http://huiligroup.org/">Prof. Hui Li Group</a></li>
-			</ul>
-			<div class="social">
-			<h3>Social</h3>
-			<ul>
-			</ul>
-			</div>
-		</div>
-	  </div>
-	  <div class="content">
-	<div class='article'>
-		<div class="page-header"><h1>MANPATH ${MANPATH} $(manpath)</h1></div>
-		<div class="well small">Permalink: <a class="more" href="http://www.zhaiyusci.net/blog/manpath-manpath-manpath.html">2016-08-30 20:30:00+08:00</a>
-by <a class="url fn" href="http://www.zhaiyusci.net/blog/author/yu-zhai.html">Yu Zhai </a>
- in <a href="http://www.zhaiyusci.net/blog/category/technology.html">Technology</a>
-</div>
-		<div><p>In the past, I only set the shell variable <code>PATH</code> to make the software compiledby me can be found.</p>
+<body>
+<!-- Sidebar -->
+<aside>
+    <!--<center><a href="http://www.zhaiyusci.net/blog"><img id="avatar" src=""></a></center>-->
+    <h1>zhaiyuSCI</h1>
+    <br>
+
+
+    <nav class="nav">
+        <ul class="list-bare">
+
+
+                <li><a class="nav__link" href="http://www.zhaiyusci.net/blog/pages/about-the-author.html">About the author</a></li>
+
+        </ul>
+    </nav>
+
+    <p class="social">
+            <a href="http://www.zhaiyusci.net/blog/feeds/all.atom.xml" rel="alternate">
+                <img src="http://www.zhaiyusci.net/blog/theme/images/icons/rss.png"></a>
+    </p>
+
+        <h2>Categories</h2>
+        <ul class="navbar">
+                <li><a
+                        href="http://www.zhaiyusci.net/blog/category/education.html">Education</a></li>
+                <li><a
+                        href="http://www.zhaiyusci.net/blog/category/science.html">Science</a></li>
+                <li><a
+                        href="http://www.zhaiyusci.net/blog/category/tech.html">Tech</a></li>
+                <li class="active"><a
+                        href="http://www.zhaiyusci.net/blog/category/technology.html">Technology</a></li>
+        </ul>
+
+        <h2 class="blog_roll_link"><br/>BLOGROLLS</h2>
+        <ul class="navbar">
+                <li><a href="http://huiligroup.org/">Prof. Hui Li Group</a></li>
+        </ul>
+
+</aside>
+
+<!-- Content -->
+<article>
+    <section id="content">
+        <article>
+            <h2 class="post_title post_detail"><a href="http://www.zhaiyusci.net/blog/manpath-manpath-manpath.html" rel="bookmark"
+                                                  title="Permalink to MANPATH ${MANPATH} $(manpath)">MANPATH ${MANPATH} $(manpath)</a></h2>
+            <div class="entry-content blog-post">
+                <p>In the past, I only set the shell variable <code>PATH</code> to make the software compiledby me can be found.</p>
 <p>And after I installed TeXLive 2016 I learnt how to set <code>MANPATH</code>, which allows me to use man to browse the manual.</p>
 <p>But today, I find what I was doing is absolutely wrong.</p>
 <p>I use Linux Mint 18.</p>
@@ -87,16 +113,62 @@ by <a class="url fn" href="http://www.zhaiyusci.net/blog/author/yu-zhai.html">Yu
 </pre></div>
 
 
-<p>The second line up there is to set the MANPATH the initial value it should be as the <code>/etc/manpath.config</code> is sourced.  <em>Notice that the first line is also indispensible 'cause the <code>manpath</code> excutable will ignore <code>/etc/manpath.config</code> as well if <code>MANPATH</code> is set</em>.</p></div>
-	</div>
-		<footer>
-		  <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
-      <p>&copy; 2016-<span id="copyrightyear">present</span> Yu Zhai.  All right reserved.</p>
-      <script> var copyrightdate= new Date(); var copyrightyear = copyrightdate.getFullYear(); document.getElementById("copyrightyear").innerHTML = copyrightyear; </script>
-			<!-- <p>&copy; 2016-Yu Zhai</p> -->
-		</footer>
-	  </div>
+<p>The second line up there is to set the MANPATH the initial value it should be as the <code>/etc/manpath.config</code> is sourced.  <em>Notice that the first line is also indispensible 'cause the <code>manpath</code> excutable will ignore <code>/etc/manpath.config</code> as well if <code>MANPATH</code> is set</em>.</p>
+            </div>
+            <div class="post_list">
+                <span>By </span>
+                <a href="http://www.zhaiyusci.net/blog/author/yu-zhai.html">@Yu Zhai</a>
+                <span> in </span>
+                <span class="post_category"><a href="http://www.zhaiyusci.net/blog/category/technology.html" rel="bookmark"
+                                               title="Permalink to Technology">[ Technology ]</a></span>
+                <span class="post_date">Tue 30 August 2016</span>
+                <div><span>Tags : </span>
+                </div>
 
-	</div>
+                <div class="entry-social">
+                    <span class="twitter"><a target="_blank" rel="nofollow"
+                                             onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;"
+                                             title="Twitter"
+                                             href="https://twitter.com/share?url=http://www.zhaiyusci.net/blog/manpath-manpath-manpath.html&text=MANPATH ${MANPATH} $(manpath)&via="><img
+                            src="http://www.zhaiyusci.net/blog/theme/images/icons/twitter-s.png"></a></span>
+
+                    <span class="gplus"><a target="_blank" title="Google +"
+                                           href="https://plus.google.com/share?url=http://www.zhaiyusci.net/blog/manpath-manpath-manpath.html&hl=fr"
+                                           rel="nofollow"
+                                           onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img
+                            src="http://www.zhaiyusci.net/blog/theme/images/icons/google-s.png"></a></span>
+
+                    <span class="facebook"><a target="_blank" title="Facebook" rel="nofollow"
+                                              onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;"
+                                              href="https://www.facebook.com/sharer.php?u=http://www.zhaiyusci.net/blog/manpath-manpath-manpath.html&t=MANPATH ${MANPATH} $(manpath)"><img
+                            src="http://www.zhaiyusci.net/blog/theme/images/icons/facebook-s.png"></a></span>
+
+                    <a target="_blank" title="Linkedin"
+                       href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.zhaiyusci.net/blog/manpath-manpath-manpath.html&title=MANPATH ${MANPATH} $(manpath)"
+                       rel="nofollow"
+                       onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img
+                            src="http://www.zhaiyusci.net/blog/theme/images/icons/linkedin-s.png"></a>
+
+                    <span class="mail"><a
+                            href="mailto:?subject=MANPATH ${MANPATH} $(manpath)&amp;body=Viens découvrir un article à propos de [MANPATH ${MANPATH} $(manpath)] sur le site de Yu Zhai. http://www.zhaiyusci.net/blog/manpath-manpath-manpath.html"
+                            title="Share by Email" target="_blank"><img
+                            src="http://www.zhaiyusci.net/blog/theme/images/icons/mail-s.png"></a></span>
+                </div>
+            </div>
+        </article>
+    </section>
+</article>
+
+<!-- Footer -->
+    <footer>
+        <p>
+            Blog powered by <a href="http://getpelican.com/">Pelican</a>,
+            which takes great advantage of <a href="http://python.org">Python</a>.
+            Theme <a href="https://github.com/parbhat/pelican-blue">Pelican-Blue</a> by <a
+                href="https://parbhatpuri.com/">@parbhat</a>.
+        </p>
+    </footer>
+
+
 </body>
 </html>

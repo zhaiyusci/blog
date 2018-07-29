@@ -1,6 +1,6 @@
 Title: Install kdenlive on Windows
 Date: 2018-07-29 02:10
-Category: Tech
+Category: Technology
 Authors: Yu Zhai
 
 [kdenlive](https://kdenlive.org/en/) is a free software used to edit videos.  Although there is 'kde' in its name, it can be used on Windows.

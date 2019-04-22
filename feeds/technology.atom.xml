@@ -1,5 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>zhaiyuSCI - Technology</title><link href="http://www.zhaiyusci.net/blog/" rel="alternate"></link><link href="http://www.zhaiyusci.net/blog/feeds/technology.atom.xml" rel="self"></link><id>http://www.zhaiyusci.net/blog/</id><updated>2018-07-29T02:10:00+08:00</updated><entry><title>Install kdenlive on Windows</title><link href="http://www.zhaiyusci.net/blog/install-kdenlive-on-windows.html" rel="alternate"></link><published>2018-07-29T02:10:00+08:00</published><updated>2018-07-29T02:10:00+08:00</updated><author><name>Yu Zhai</name></author><id>tag:www.zhaiyusci.net,2018-07-29:/blog/install-kdenlive-on-windows.html</id><summary type="html">&lt;p&gt;&lt;a href="https://kdenlive.org/en/"&gt;kdenlive&lt;/a&gt; is a free software used to edit videos.  Although there is 'kde' in its name, it can be used on Windows.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>zhaiyuSCI - Technology</title><link href="http://www.zhaiyusci.net/blog/" rel="alternate"></link><link href="http://www.zhaiyusci.net/blog/feeds/technology.atom.xml" rel="self"></link><id>http://www.zhaiyusci.net/blog/</id><updated>2019-04-21T22:30:00+08:00</updated><entry><title>How to set up remote ssh tunneling (port forward)</title><link href="http://www.zhaiyusci.net/blog/how-to-set-up-remote-ssh-tunneling-port-forward.html" rel="alternate"></link><published>2019-04-21T22:30:00+08:00</published><updated>2019-04-21T22:30:00+08:00</updated><author><name>Yu Zhai</name></author><id>tag:www.zhaiyusci.net,2019-04-21:/blog/how-to-set-up-remote-ssh-tunneling-port-forward.html</id><summary type="html">&lt;p&gt;Computational resource of our institute is behind some firewall.&lt;/p&gt;
+&lt;p&gt;It means I need some method to connect to it if I am not in the office.
+Even when I stay in the dormitory, I need some remote desktop software.&lt;/p&gt;
+&lt;p&gt;I used to use TeamViewer.  Recently I realized that TeamViewer treat …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Computational resource of our institute is behind some firewall.&lt;/p&gt;
+&lt;p&gt;It means I need some method to connect to it if I am not in the office.
+Even when I stay in the dormitory, I need some remote desktop software.&lt;/p&gt;
+&lt;p&gt;I used to use TeamViewer.  Recently I realized that TeamViewer treat the university as
+some 'business environment'.  Sorry guys, I did not read the EULA carefully.
+Besides, transfer the whole desktop via Internet is not a very good idea.
+I have to say that TeamViewer does a good job.  I will use it for some special
+case for personal affairs.  &lt;/p&gt;
+&lt;p&gt;Since I only need connect to ssh server actually, I learnt that port forwarding
+is the right way.  I failed set it up in the past.  Now I believe I have find the
+proper way to do that.  I take some notes here.&lt;/p&gt;
+&lt;p&gt;First thing first you need a VPS.  You need it any way if you are a Chinese scientist.
+I got one from &lt;a href="https://www.conoha.jp/"&gt;Conoha.jp&lt;/a&gt;.  They accept Alipay as one of the payment method.
+Moreover, they have a Chinese interface (but I really do not know way they do not have an English one,
+perhaps they just focus on CJK market).&lt;/p&gt;
+&lt;p&gt;The VPS will have a public IP, which is important.  Then set the operating system. I use ubuntu.
+If you are not sure, and only want set an ssh tunnely remote server, you can follow my 
+choice. Follow what conoha tells you.  Set the root password, etc.&lt;/p&gt;
+&lt;p&gt;Make sure the ssh default port (22) is open in the panel.  After that, you should connect your VPS with
+ssh.  &lt;/p&gt;
+&lt;p&gt;The key step is edit the file &lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;.  Add the following lines:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# To solve break ssh tunneling problem 
+# Ref: https://unix.stackexchange.com/questions/427189/how-to-cleanup-ssh-reverse-tunnel-socket-after-connection-closed
+StreamLocalBindUnlink yes
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;By now, the remote part is finished.&lt;/p&gt;
+&lt;p&gt;Then the local part.  I have a Windows computer in my office.  So just open MobaXterm, click
+'Tunneling' in the toolbar.  Set up a 'remote' tunneling rule. Like this&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Remote tunneling" src="http://www.zhaiyusci.net/blog/img/mobatunnel.png"&gt;&lt;/p&gt;
+&lt;p&gt;Set the rule as auto start and reconnect if break.&lt;/p&gt;
+&lt;p&gt;Then enjoy by login your VPS then type:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ssh your_user_name@0.0.0.0 -p &lt;span class="m"&gt;10133&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content></entry><entry><title>Install kdenlive on Windows</title><link href="http://www.zhaiyusci.net/blog/install-kdenlive-on-windows.html" rel="alternate"></link><published>2018-07-29T02:10:00+08:00</published><updated>2018-07-29T02:10:00+08:00</updated><author><name>Yu Zhai</name></author><id>tag:www.zhaiyusci.net,2018-07-29:/blog/install-kdenlive-on-windows.html</id><summary type="html">&lt;p&gt;&lt;a href="https://kdenlive.org/en/"&gt;kdenlive&lt;/a&gt; is a free software used to edit videos.  Although there is 'kde' in its name, it can be used on Windows.&lt;/p&gt;
 &lt;p&gt;The &lt;a href="https://kdenlive.org/en/download/"&gt;official download page&lt;/a&gt; has provided a version for Windows.  However, it does not work at the first step: including your raw videos in the clip bin.  &lt;/p&gt;
 &lt;p&gt;This …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://kdenlive.org/en/"&gt;kdenlive&lt;/a&gt; is a free software used to edit videos.  Although there is 'kde' in its name, it can be used on Windows.&lt;/p&gt;
 &lt;p&gt;The &lt;a href="https://kdenlive.org/en/download/"&gt;official download page&lt;/a&gt; has provided a version for Windows.  However, it does not work at the first step: including your raw videos in the clip bin.  &lt;/p&gt;

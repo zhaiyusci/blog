@@ -45,8 +45,10 @@ Then the local part.  I have a Windows computer in my office.  So just open Moba
 
 Set the rule as auto start and reconnect if break.
 
-Then enjoy by login your VPS then type:
+Login your VPS then type:
 ```bash
 ssh your_user_name@0.0.0.0 -p 10133
 ```
+
+Enjoy!
 

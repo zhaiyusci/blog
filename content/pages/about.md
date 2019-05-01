@@ -2,7 +2,7 @@ Title: About the author
 Date: 2016-05-25 23:10
 Authors: Yu Zhai
 
-<img style="float:right;width:120px;margin:10px 10px 10px 10px" src="{filename}/img/yuzhai_2016.jpg"/>
+<img style="float:right;width:120px;margin:10px 10px 10px 10px" src="{static}/img/yuzhai_2016.jpg"/>
 I am Yu ZHAI, and 'ZHAI' is my lastname. 
 
 

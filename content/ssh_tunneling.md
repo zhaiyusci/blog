@@ -41,7 +41,7 @@ By now, the remote part is finished.
 Then the local part.  I have a Windows computer in my office.  So just open MobaXterm, click
 'Tunneling' in the toolbar.  Set up a 'remote' tunneling rule. Like this
 
-![Remote tunneling]({filename}/img/mobatunnel.png)
+![Remote tunneling]({static}/img/mobatunnel.png)
 
 Set the rule as auto start and reconnect if break.
 
@@ -54,6 +54,8 @@ Enjoy!
 
 ---
 
-Correction: I found that MobaXterm is not good enough for this.  It losts connects often.
+Update 2019-05-01:
+
+I found that MobaXterm is not good enough for this.  It losts connects often.
 [Bitvise](https://www.bitvise.com/) is good.  Try it.
 

@@ -4,7 +4,7 @@ Authors: Yu Zhai
 
 ( This article was written by me and revised by Prof. Hui Li and Prof. Fred McCourt.  It was first published at [http://huiligroup.org/en/leroy.html](http://huiligroup.org/en/leroy.html). )
 
-<img style="float:right;width:200px;margin:10px 10px 10px 10px" src="{filename}/img/leroy-memory.png"/>
+<img style="float:right;width:200px;margin:10px 10px 10px 10px" src="{static}/img/leroy-memory.png"/>
 
 Our dearest friend, Professor Robert J. Le Roy, passed away on Friday, August 10, 2018, at age 74. He was and will always be our mentor of both academia and life.
 

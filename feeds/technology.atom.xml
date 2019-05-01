@@ -39,7 +39,10 @@ StreamLocalBindUnlink yes
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Enjoy!&lt;/p&gt;</content></entry><entry><title>Install kdenlive on Windows</title><link href="http://www.zhaiyusci.net/blog/install-kdenlive-on-windows.html" rel="alternate"></link><published>2018-07-29T02:10:00+08:00</published><updated>2018-07-29T02:10:00+08:00</updated><author><name>Yu Zhai</name></author><id>tag:www.zhaiyusci.net,2018-07-29:/blog/install-kdenlive-on-windows.html</id><summary type="html">&lt;p&gt;&lt;a href="https://kdenlive.org/en/"&gt;kdenlive&lt;/a&gt; is a free software used to edit videos.  Although there is 'kde' in its name, it can be used on Windows.&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Correction: I found that MobaXterm is not good enough for this.  It losts connects often.
+&lt;a href="https://www.bitvise.com/"&gt;Bitvise&lt;/a&gt; is good.  Try it.&lt;/p&gt;</content></entry><entry><title>Install kdenlive on Windows</title><link href="http://www.zhaiyusci.net/blog/install-kdenlive-on-windows.html" rel="alternate"></link><published>2018-07-29T02:10:00+08:00</published><updated>2018-07-29T02:10:00+08:00</updated><author><name>Yu Zhai</name></author><id>tag:www.zhaiyusci.net,2018-07-29:/blog/install-kdenlive-on-windows.html</id><summary type="html">&lt;p&gt;&lt;a href="https://kdenlive.org/en/"&gt;kdenlive&lt;/a&gt; is a free software used to edit videos.  Although there is 'kde' in its name, it can be used on Windows.&lt;/p&gt;
 &lt;p&gt;The &lt;a href="https://kdenlive.org/en/download/"&gt;official download page&lt;/a&gt; has provided a version for Windows.  However, it does not work at the first step: including your raw videos in the clip bin.  &lt;/p&gt;
 &lt;p&gt;This …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://kdenlive.org/en/"&gt;kdenlive&lt;/a&gt; is a free software used to edit videos.  Although there is 'kde' in its name, it can be used on Windows.&lt;/p&gt;
 &lt;p&gt;The &lt;a href="https://kdenlive.org/en/download/"&gt;official download page&lt;/a&gt; has provided a version for Windows.  However, it does not work at the first step: including your raw videos in the clip bin.  &lt;/p&gt;

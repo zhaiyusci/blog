@@ -52,3 +52,8 @@ ssh your_user_name@0.0.0.0 -p 10133
 
 Enjoy!
 
+---
+
+Correction: I found that MobaXterm is not good enough for this.  It losts connects often.
+[Bitvise](https://www.bitvise.com/) is good.  Try it.
+

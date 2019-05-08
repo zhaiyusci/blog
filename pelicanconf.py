@@ -22,7 +22,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = ( ('Prof. Hui Li Group', 'http://huiligroup.org/'),
+LINKS = ( ('Prof. Hui Li Group', 'https://huiligroup.org/'),
          )
 
 # Social widget

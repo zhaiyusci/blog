@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en" itemscope itemtype="https://schema.org/Person">
+<head>
+            <meta charset="utf-8">
+        <!-- Site Meta Data -->
+        <title>How to use GaussView5 via ssh</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Yu Zhai">
+
+        <link rel="shortcut icon" href="">
+
+        <!-- schema.org -->
+        <meta itemprop="name" content="zhaiyuSCI">
+        <meta itemprop="image" content="">
+        <meta itemprop="description" content="">
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        <!-- Style Meta Data -->
+        <link rel="stylesheet" href="https://www.zhaiyusci.net/blog/theme/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="https://www.zhaiyusci.net/blog/theme/css/pygments.css" type="text/css"/>
+
+        <!-- Feed Meta Data -->
+            <link href="https://www.zhaiyusci.net/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+                  title="zhaiyuSCI ATOM Feed"/>
+
+        <!-- Twitter Feed -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="">
+        <meta name="twitter:image" content="">
+
+    <meta name="twitter:creator" content="">
+    <meta name="twitter:url" content="https://www.zhaiyusci.net/blog/how-to-use-gaussview5-via-ssh.html">
+    <meta name="twitter:title" content="zhaiyuSCI ~ How to use GaussView5 via ssh">
+    <meta name="twitter:description" content="Well, it seems that a lot of people (including the past me) do not know how to use GaussView in a server. Say, it is fairly difficult to set the X server up. Prof. Li and I want to use it. Actually, Prof. Li was going to let me help …">
+
+    <!-- Facebook Meta Data -->
+    <meta property="og:title" content="zhaiyuSCI ~ How to use GaussView5 via ssh"/>
+    <meta property="og:description" content="Well, it seems that a lot of people (including the past me) do not know how to use GaussView in a server. Say, it is fairly difficult to set the X server up. Prof. Li and I want to use it. Actually, Prof. Li was going to let me help …"/>
+    <meta property="og:image" content=""/>
+</head>
+
+<body>
+<!-- Sidebar -->
+<aside>
+    <!--<center><a href="https://www.zhaiyusci.net/blog"><img id="avatar" src=""></a></center>-->
+    <h1>zhaiyuSCI</h1>
+    <br>
+
+
+    <nav class="nav">
+        <ul class="list-bare">
+
+
+                <li><a class="nav__link" href="https://www.zhaiyusci.net/blog/pages/about-the-author.html">About the author</a></li>
+
+        </ul>
+    </nav>
+
+    <p class="social">
+                <a href="https://www.linkedin.com/in/yu-zhai-1ba26291" target="_blank"><img
+                        src="https://www.zhaiyusci.net/blog/theme/images/icons/linkedin.png"></a>
+                <a href="https://github.com/zhaiyusci" target="_blank"><img
+                        src="https://www.zhaiyusci.net/blog/theme/images/icons/github.png"></a>
+            <a href="https://www.zhaiyusci.net/blog/feeds/all.atom.xml" rel="alternate">
+                <img src="https://www.zhaiyusci.net/blog/theme/images/icons/rss.png"></a>
+    </p>
+
+        <h2>Categories</h2>
+        <ul class="navbar">
+                <li><a
+                        href="https://www.zhaiyusci.net/blog/category/education.html">Education</a></li>
+                <li><a
+                        href="https://www.zhaiyusci.net/blog/category/misc.html">misc</a></li>
+                <li><a
+                        href="https://www.zhaiyusci.net/blog/category/science.html">Science</a></li>
+                <li class="active"><a
+                        href="https://www.zhaiyusci.net/blog/category/technology.html">Technology</a></li>
+        </ul>
+
+        <h2 class="blog_roll_link"><br/>BLOGROLLS</h2>
+        <ul class="navbar">
+                <li><a href="https://huiligroup.org/">Prof. Hui Li Group</a></li>
+        </ul>
+
+</aside>
+
+<!-- Content -->
+<article>
+    <section id="content">
+        <article>
+            <h2 class="post_title post_detail"><a href="https://www.zhaiyusci.net/blog/how-to-use-gaussview5-via-ssh.html" rel="bookmark"
+                                                  title="Permalink to How to use GaussView5 via ssh">How to use GaussView5 via ssh</a></h2>
+            <div class="entry-content blog-post">
+                <p>Well, it seems that a lot of people (including the past me) do not know how to use GaussView in a server.  Say, it is fairly difficult to set the X server up.</p>
+<p><a href="http://huiligroup.org/">Prof. Li</a> and I want to use it.  Actually, Prof. Li was going to let me help him install a copy on his Macbook.  However, we find that we do not have the copyright to do so.  But our institute do buy the software, at least for the server.  But we found it did not work.</p>
+<p>The reason is that in the past IT engineer from ITC set the environment variable <code>DISPLAY</code> as a value (Why? I do not know).  And there do be some essay online told us that you should set things up in your <code>.bashrc</code> like this</p>
+<div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">REMOTEHOST</span><span class="o">=</span><span class="sb">`</span>who am i <span class="p">|</span> sed -n <span class="s1">&#39;s/.*(\([^) ]*\).*/\1/p; 1q&#39;</span><span class="sb">`</span>
+<span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span><span class="si">${</span><span class="nv">REMOTEHOST</span><span class="si">}</span>:0
+</pre></div>
+
+
+<p>Er, it is not that right.</p>
+<p>Prof. Li told me that when he worked in uwaterloo, it is easy.  You can just type <code>ssh -Y xxx.xxx.xxx.xxx</code> to login and <code>gv</code>.  Well...</p>
+<p>Back from Prof. Li's office, I find that what I am using, <a href="http://mobaxterm.mobatek.net/">MobaXterm</a>, can easily open its X server automatically.  It came to me that maybe there is something MobaXterm do but we do not know.  I check its setting and find it enable the X forwarding and I read the man page of ssh, it is what <code>-Y</code> do.  And what is more, MobaXterm can setup <code>DISPLAY</code> automatically.  So, maybe <code>ssh -Y</code> can do the same thing.  But there is some different.  I think <code>ssh -Y</code> will not change <code>DISPLAY</code> if it has been set, like this</p>
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> x<span class="nv">$DISPLAY</span> -ne x <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nv">DISPLAY</span><span class="o">=</span>xxx <span class="c1"># I do not know what it actually does,</span>
+<span class="k">fi</span>
+</pre></div>
+
+
+<p>So I comment out the line in <code>~/.bashrc</code> problem solved.</p>
+<p>It is also true if you are using Molden from server.</p>
+<p>And again, I recommend MobaXterm to you.</p>
+            </div>
+            <div class="post_list">
+                <span>By </span>
+                <a href="https://www.zhaiyusci.net/blog/author/yu-zhai.html">@Yu Zhai</a>
+                <span> in </span>
+                <span class="post_category"><a href="https://www.zhaiyusci.net/blog/category/technology.html" rel="bookmark"
+                                               title="Permalink to Technology">[ Technology ]</a></span>
+                <span class="post_date">Thu 26 May 2016</span>
+                <div><span>Tags : </span>
+                </div>
+
+                <div class="entry-social">
+                    <span class="twitter"><a target="_blank" rel="nofollow"
+                                             onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;"
+                                             title="Twitter"
+                                             href="https://twitter.com/share?url=https://www.zhaiyusci.net/blog/how-to-use-gaussview5-via-ssh.html&text=How to use GaussView5 via ssh&via="><img
+                            src="https://www.zhaiyusci.net/blog/theme/images/icons/twitter-s.png"></a></span>
+
+                    <span class="gplus"><a target="_blank" title="Google +"
+                                           href="https://plus.google.com/share?url=https://www.zhaiyusci.net/blog/how-to-use-gaussview5-via-ssh.html&hl=fr"
+                                           rel="nofollow"
+                                           onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img
+                            src="https://www.zhaiyusci.net/blog/theme/images/icons/google-s.png"></a></span>
+
+                    <span class="facebook"><a target="_blank" title="Facebook" rel="nofollow"
+                                              onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;"
+                                              href="https://www.facebook.com/sharer.php?u=https://www.zhaiyusci.net/blog/how-to-use-gaussview5-via-ssh.html&t=How to use GaussView5 via ssh"><img
+                            src="https://www.zhaiyusci.net/blog/theme/images/icons/facebook-s.png"></a></span>
+
+                    <a target="_blank" title="Linkedin"
+                       href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.zhaiyusci.net/blog/how-to-use-gaussview5-via-ssh.html&title=How to use GaussView5 via ssh"
+                       rel="nofollow"
+                       onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img
+                            src="https://www.zhaiyusci.net/blog/theme/images/icons/linkedin-s.png"></a>
+
+                    <span class="mail"><a
+                            href="mailto:?subject=How to use GaussView5 via ssh&amp;body=I find an interesting artical: [How to use GaussView5 via ssh] by Yu Zhai. https://www.zhaiyusci.net/blog/how-to-use-gaussview5-via-ssh.html"
+                            title="Share by Email" target="_blank"><img
+                            src="https://www.zhaiyusci.net/blog/theme/images/icons/mail-s.png"></a></span>
+                </div>
+            </div>
+        </article>
+    </section>
+</article>
+
+<!-- Footer -->
+    <footer>
+        <p>
+            Blog powered by <a href="https://getpelican.com/">Pelican</a>,
+            which takes great advantage of <a href="https://python.org">Python</a>.
+            Theme <a href="https://github.com/parbhat/pelican-blue">Pelican-Blue</a> by <a
+                href="https://parbhatpuri.com/">@parbhat</a>.
+        </p>
+    </footer>
+
+
+</body>
+</html>

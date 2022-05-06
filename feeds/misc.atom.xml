@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>zhaiyuSCI - misc</title><link href="https://www.zhaiyusci.net/blog/" rel="alternate"></link><link href="https://www.zhaiyusci.net/blog/feeds/misc.atom.xml" rel="self"></link><id>https://www.zhaiyusci.net/blog/</id><updated>2022-05-06T16:30:00+08:00</updated><entry><title>团队技术写作标准作业流程</title><link href="https://www.zhaiyusci.net/blog/tuan-dui-ji-zhu-xie-zuo-biao-zhun-zuo-ye-liu-cheng.html" rel="alternate"></link><published>2022-05-06T16:30:00+08:00</published><updated>2022-05-06T16:30:00+08:00</updated><author><name>Yu Zhai</name></author><id>tag:www.zhaiyusci.net,2022-05-06:/blog/tuan-dui-ji-zhu-xie-zuo-biao-zhun-zuo-ye-liu-cheng.html</id><summary type="html">&lt;p&gt;Licence: CC BY-NC-SA 4.0&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;技术写作&lt;/strong&gt;（Technical Writing）贯穿每一个科研人员的职业生涯：基金评审靠它，论文发表靠它，总结报告还靠它。其核心是通过 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Licence: CC BY-NC-SA 4.0&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;技术写作&lt;/strong&gt;（Technical Writing）贯穿每一个科研人员的职业生涯：基金评审靠它，论文发表靠它，总结报告还靠它。其核心是通过清晰明确的描述事实说服潜在读者接纳你的观点。
-&lt;strong&gt;标准作业流程&lt;/strong&gt;（Standard Operating Procedure，SOP）对于团队运行的重要性也无需多言。SOP可以使得团队高效率、准确地运转，在事前有底气，在事后可回顾，经验教训可以通过对SOP的修订传承下去，而这一切的成本都可以降到最低。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>zhaiyuSCI - misc</title><link href="https://www.zhaiyusci.net/blog/" rel="alternate"></link><link href="https://www.zhaiyusci.net/blog/feeds/misc.atom.xml" rel="self"></link><id>https://www.zhaiyusci.net/blog/</id><updated>2022-05-06T16:30:00+08:00</updated><entry><title>团队技术写作标准作业流程</title><link href="https://www.zhaiyusci.net/blog/tuan-dui-ji-zhu-xie-zuo-biao-zhun-zuo-ye-liu-cheng.html" rel="alternate"></link><published>2022-05-06T16:30:00+08:00</published><updated>2022-05-06T16:30:00+08:00</updated><author><name>Yu Zhai</name></author><id>tag:www.zhaiyusci.net,2022-05-06:/blog/tuan-dui-ji-zhu-xie-zuo-biao-zhun-zuo-ye-liu-cheng.html</id><summary type="html">&lt;p&gt;本文按&lt;strong&gt;署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)&lt;/strong&gt;&lt;a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"&gt;协议&lt;/a&gt;授权使用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;技术写作&lt;/strong&gt;（Technical Writing）贯穿每一个科研人员的职业生 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;本文按&lt;strong&gt;署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)&lt;/strong&gt;&lt;a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"&gt;协议&lt;/a&gt;授权使用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;技术写作&lt;/strong&gt;（Technical Writing）贯穿每一个科研人员的职业生涯：基金评审靠它，论文发表靠它，总结报告还靠它。其核心是通过清晰明确的描述事实说服潜在读者接纳你的观点。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;标准作业流程&lt;/strong&gt;（Standard Operating Procedure，SOP）对于团队运行的重要性也无需多言。SOP可以使得团队高效率、准确地运转，在事前有底气，在事后可回顾，经验教训可以通过对SOP的修订传承下去，而这一切的成本都可以降到最低。&lt;/p&gt;
 &lt;p&gt;大型文档的写作很难靠单人完成，不仅是因为工作量巨大，更是因为在工作中每个人的专长和负责的研究内容不同，让专家写其专业更容易写出高质量的文档，也可以为其中细节的正确性负责。&lt;/p&gt;
 &lt;p&gt;本文的讲述重点是&lt;strong&gt;团队技术写作&lt;/strong&gt;。这意味着本文会涵盖团队合作写作的要领，而不会刻意涵盖语法规范、写作技巧、软件使用方法、某部门文档标准。也就是说，你如果本身写作技巧很糟糕、软件用得很不规范、不阅读收稿机构的说明，在阅读本文后依然有很大概率写出失败的文档。&lt;/p&gt;
 &lt;p&gt;本文&lt;strong&gt;不会&lt;/strong&gt;教你如何做科研：科学研究本身没有 SOP，任何科研人员都应该竭尽全力探索未知，而不是循着任何现有方式做常规工作。&lt;/p&gt;
-&lt;h1&gt;事先准备&lt;/h1&gt;
+&lt;h2&gt;事先准备&lt;/h2&gt;
 &lt;p&gt;正如前文所述，本文不会教你如何做科研。当你写一篇学术论文前，你当然应该保证该做的实验都基本完成，数据能够证明你的结论；当你写一篇项目申请的时候，你当然应该充分了解过该领域研究现状，乃至做好早期研究。尤其是主要负责人，应该&lt;strong&gt;对科学技术逻辑比较清楚&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;充分理解收稿机构的所有政策文件和辅助材料，尤其是对于&lt;strong&gt;新政策&lt;/strong&gt;要仔细把握，不要因为曾经有过同机构的申请/投稿经验就麻痹大意。有必要时请获取（或自制）&lt;strong&gt;自查表&lt;/strong&gt;（checklist）。部分涉及行政的事项应提前安排。&lt;/p&gt;
 &lt;p&gt;搞清楚收稿截止日期，建议在截止日期&lt;strong&gt;前3天&lt;/strong&gt;完工，以预留充足的机动时间。同一时间是否有比写作更重要的事或不得不做的事，如你或团队成员需要写其他文件，需要出差，需要上课……做好统筹安排，无论是时间上的还是人事上的。&lt;/p&gt;
-&lt;h1&gt;准备提纲&lt;/h1&gt;
+&lt;h2&gt;准备提纲&lt;/h2&gt;
 &lt;p&gt;往往收稿机构会为你准备一个提纲，但这种提纲往往是十分粗糙的，&lt;strong&gt;仅具有形式审查的意义&lt;/strong&gt;。例如，申请中国国家自然科学基金（NSFC）必须按照基金委提供的提纲编写申请书正文。&lt;/p&gt;
 &lt;p&gt;此外，写作团队需要依据上述官方提纲编写一个&lt;strong&gt;足够细化&lt;/strong&gt;的提纲。该提纲应该可以体现文本的&lt;strong&gt;主要逻辑&lt;/strong&gt;和&lt;strong&gt;关键细节&lt;/strong&gt;。例如，国内外工作现状是怎样的，主要有什么问题，对于这些问题我们的改进方案是什么，经典使用例等。该提纲必须&lt;strong&gt;成文&lt;/strong&gt;，但无需很正式，体现出关键词即可，同时应指出各部分大约的篇幅。&lt;/p&gt;
 &lt;p&gt;提纲应由主要负责人起草，主要负责人经验较少时，应由较资深成员协助，交写作团队全体会议严格讨论其逻辑是否有问题，研究是否有科学价值，是否容易通过等。尤其注意当指出现存研究问题时，不可言出无据，犯&lt;a href="https://thebestschools.org/magazine/15-logical-fallacies-know/"&gt;稻草人谬误&lt;/a&gt;，要知道，审稿人的研究很有可能正在被你批评。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大纲讨论越充分，后面的写作和修改环节越轻松。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;一般文档的提纲大约需要3个工作日定稿。如项目规模很大，应在3日内做好总体提纲，各课题（子项目）交各负责人进一步内部讨论。&lt;/p&gt;
-&lt;h1&gt;任务分配与快速写作&lt;/h1&gt;
+&lt;h2&gt;任务分配与快速写作&lt;/h2&gt;
 &lt;p&gt;讨论好提纲后，应按照人员&lt;strong&gt;研究专长&lt;/strong&gt;进行任务分配。不涉及专长的部分，应由主要负责人自己完成或指派任务较轻者完成。&lt;/p&gt;
 &lt;p&gt;任务分配时应参照写作篇幅&lt;strong&gt;合理安排工作时间&lt;/strong&gt;。写自己懂的部分实际上是非常迅速的，甚至由于写得过于兴奋而超过字数限制。因此，不要因为一个技术专家的写作速度有欠缺就提出换人写，应该想办法帮助进一步分解问题，卸下其思想包袱。但同时要意识到科技写作十分强调事实查核，引用参考文献是十分耗时的。此处不负责任地推测一个一般水平的写作者的产量以汉字记约为 2000 - 2500 字/工作日。&lt;/p&gt;
 &lt;p&gt;任务分配时应确保写作团队成员&lt;strong&gt;充分了解大纲精神&lt;/strong&gt;，尤其是充分了解自己的写作内容和写作目标。&lt;/p&gt;
@@ -25,7 +25,7 @@
 &lt;p&gt;注意，很多人负责人会觉得让分管专家写得越长越好，这是&lt;strong&gt;错误&lt;/strong&gt;的，这样只会在累死写作者的同时得到一份缺乏重点的垃圾文本。应该把重点明确在大纲里，交给专家围绕主题展开。&lt;/p&gt;
 &lt;p&gt;总体目标是&lt;strong&gt;迅速&lt;/strong&gt;拿出初稿供集体讨论，无论任务多艰巨，也应该当在&lt;strong&gt;1周&lt;/strong&gt;以内完成。如果原则上办不到，你需要考虑一下你的团队规模问题。&lt;/p&gt;
 &lt;p&gt;在此过程中，遇到任何科学上的问题及写不下去的情况，&lt;strong&gt;务必及时提出，早讨论，早解决&lt;/strong&gt;。&lt;/p&gt;
-&lt;h1&gt;反复修改&lt;/h1&gt;
+&lt;h2&gt;反复修改&lt;/h2&gt;
 &lt;p&gt;好文章是改出来的。修改大体分为三阶段，这三阶段的顺序千万不要错。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -41,7 +41,7 @@
 &lt;p&gt;修改阶段应保证每个工作日至少生成1个新版本，以减少重复劳动和修改冲突。修改直到&lt;strong&gt;收敛&lt;/strong&gt;。
 对于项目申请书，&lt;strong&gt;尤其注意摘要、关键科学问题、结论等关键部分。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;该步骤的时间很难确定，尤其是粗修一步往往会导致大篇幅返工（令人悲伤的是，基本上很难确保每一个人都真的会遵守本SOP）。但基本上应留足至少&lt;strong&gt;1周&lt;/strong&gt;时间。&lt;/p&gt;
-&lt;h1&gt;提交文档&lt;/h1&gt;
+&lt;h2&gt;提交文档&lt;/h2&gt;
 &lt;p&gt;提交前确保再次通读文档，确保没有可见错误。确保在截止日期前递交。&lt;/p&gt;
 &lt;p&gt;递交后应睡个好觉。&lt;/p&gt;
 &lt;hr&gt;
